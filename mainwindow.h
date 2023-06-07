@@ -28,5 +28,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QString getLocalIP();//获取本机IP地址
+    QString name;
 };
 #endif // MAINWINDOW_H

@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,6 +20,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     modechoose.cpp \
+    netserver.cpp \
     newgame.cpp \
     numchoose.cpp
 
@@ -27,6 +28,7 @@ HEADERS += \
     gamechoose.h \
     mainwindow.h \
     modechoose.h \
+    netserver.h \
     newgame.h \
     numchoose.h
 
