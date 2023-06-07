@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2023-06-06T16:28:13. -->
+<!-- Written by QtCreator 4.11.0, 2023-06-08T00:11:36. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -69,7 +69,6 @@
    </valuelist>
    <value type="bool" key="ClangCodeModel.UseGlobalConfig">true</value>
    <valuemap type="QVariantMap" key="ClangTools">
-    <value type="bool" key="ClangTools.AnalyzeOpenFiles">true</value>
     <value type="bool" key="ClangTools.BuildBeforeAnalysis">true</value>
     <value type="QString" key="ClangTools.DiagnosticConfig">Builtin.DefaultTidyAndClazy</value>
     <value type="int" key="ClangTools.ParallelJobs">4</value>
@@ -306,8 +305,9 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/oop/untitled/untitled.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/oop/untitled/untitled.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">untitled2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/oop/cardgame/untitled.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/oop/cardgame/untitled.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

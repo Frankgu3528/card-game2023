@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QString localIP=getLocalIP();
+
 
     //connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(on_pushButton_clicked()));
 }
@@ -59,34 +59,30 @@ void MainWindow::on_pushButton_2_clicked()
 //    gamech->show();
     qDebug() << "正在加入游戏" ;
     QUdpSocket udpClient;
+    QString localIP=getLocalIP();
+    qDebug() << localIP ;
+    udpClient.bind(QHostAddress(localIP), 9527); // 绑定到任意IP地址和随机端口号
 
-    udpClient.bind(QHostAddress("10.196.193.214"), 9527); // 绑定到任意IP地址和随机端口号
-
-    QByteArray datagram = "Hello, server!";
-
-    udpClient.writeDatagram(datagram.data(), datagram.size(),
-                             QHostAddress("10.196.193.214"), 8888); // 向服务器发送数据包
+    // 从输入框中获得玩家的name，发送给服务器(房主)
     name = ui->lineEdit->text();
     QByteArray name1 = name.toUtf8();
     qDebug()<<name;
     udpClient.writeDatagram(name1.data(), name1.size(),
                              QHostAddress("10.196.193.214"), 8888);
-        if (udpClient.waitForConnected()) {
-            qDebug() << "Connected to server successfully!"; // 新添加的输出语句
 
-        if (udpClient.hasPendingDatagrams()) {
-            QByteArray datagram;
-            datagram.resize(udpClient.pendingDatagramSize());
-            QHostAddress senderAddress;
-            quint16 senderPort;
-            udpClient.readDatagram(datagram.data(), datagram.size(),
-                                    &senderAddress, &senderPort);
-            qDebug() << "Received datagram from" << senderAddress.toString()
-                     << "on port" << senderPort;
-            // 处理收到的数据
-        }
-
+    if (udpClient.hasPendingDatagrams()) {
+        QByteArray datagram;
+        datagram.resize(udpClient.pendingDatagramSize());
+        QHostAddress senderAddress;
+        quint16 senderPort;
+        udpClient.readDatagram(datagram.data(), datagram.size(),
+                                &senderAddress, &senderPort);
+        qDebug() << "Received datagram from" << senderAddress.toString()
+                 << "on port" << senderPort;
+        // 处理收到的数据
     }
+
+
 //    this->hide();
 
 }

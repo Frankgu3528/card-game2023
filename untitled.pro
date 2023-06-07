@@ -22,7 +22,8 @@ SOURCES += \
     modechoose.cpp \
     netserver.cpp \
     newgame.cpp \
-    numchoose.cpp
+    numchoose.cpp \
+    waitroom.cpp
 
 HEADERS += \
     gamechoose.h \
@@ -30,14 +31,16 @@ HEADERS += \
     modechoose.h \
     netserver.h \
     newgame.h \
-    numchoose.h
+    numchoose.h \
+    waitroom.h
 
 FORMS += \
     gamechoose.ui \
     mainwindow.ui \
     modechoose.ui \
     newgame.ui \
-    numchoose.ui
+    numchoose.ui \
+    waitroom.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
