@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "gamechoose.h"
+#include "waitroom.h"
 #include <QDebug>
 #include <QtNetwork/QUdpSocket>
 #include <QtNetwork>
@@ -82,7 +83,8 @@ void MainWindow::on_pushButton_2_clicked()
         // 处理收到的数据
     }
 
-
+    waitroom *wt=new waitroom(this);
+    wt->show();
 //    this->hide();
 
 }

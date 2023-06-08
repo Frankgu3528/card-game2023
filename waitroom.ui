@@ -75,7 +75,7 @@ border-style:inset;
 </string>
     </property>
     <property name="text">
-     <string>开始</string>
+     <string>直接开始游戏</string>
     </property>
    </widget>
   </widget>
